@@ -10,24 +10,38 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BotResponseManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChatBot_320.ChatMessage">
-    <Position X="0.75" Y="0.75" Width="3.5" />
+    <Position X="0.75" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAoAAIAAA=</HashCode>
       <FileName>ChatMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChatBot_320.MainWindow">
-    <Position X="3.75" Y="2.75" Width="4.25" />
+    <Position X="0.75" Y="2.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAgAEAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ChatHistoryManager">
+    <Position X="5.25" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAQAAAAAAAAAAAAABEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChatHistoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScrollHelper">
+    <Position X="8.75" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAAAAA=</HashCode>
+      <FileName>ScrollHelper.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
