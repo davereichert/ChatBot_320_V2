@@ -1,10 +1,9 @@
 ﻿<Window x:Class="ChatBot_320.MainWindow"
-
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-
-        Title="ChatBot" Height="600" Width="800">
+        Title="ChatBot" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+        
 
     <Grid Background="#f7f7f7">
 
