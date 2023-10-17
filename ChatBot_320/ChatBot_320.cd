@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ChatBot_320.BotResponseManager">
+    <Position X="7.75" Y="0.5" Width="3.5" />
+    <NestedTypes>
+      <Class Name="ChatBot_320.BotResponseManager.KeywordResponse" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BotResponseManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BotResponseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChatBot_320.ChatMessage">
+    <Position X="0.75" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAoAAIAAA=</HashCode>
+      <FileName>ChatMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChatBot_320.MainWindow">
+    <Position X="3.75" Y="2.75" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
