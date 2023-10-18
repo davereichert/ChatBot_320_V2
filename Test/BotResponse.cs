@@ -14,13 +14,13 @@ namespace ChatBot_320.Tests
         {
             // Arrange
             BotResponseManager.LoadResponses();
-            var userInput = "hello";
+            var userInput = "passwort";
 
             // Act
             var response = BotResponseManager.GetResponse(userInput);
 
             // Assert
-            Assert.Equal("Hi there!", response);
+            Assert.Equal("Wenn Sie Ihr Passwort vergessen haben, nutzen Sie bitte die 'Passwort vergessen'-Funktion oder wenden Sie sich an den Administrator.", response);
         }
 
         /// <summary>

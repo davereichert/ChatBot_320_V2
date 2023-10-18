@@ -21,24 +21,26 @@ namespace ChatBot_320
             Messages = new ObservableCollection<ChatMessage>(ChatHistoryManager.LoadChatHistory());
             ScrollHelper.ScrollToBottom(ChatHistoryBox);
 
-
-
         }
         /// <summary>
         /// eventhandler für send Button
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
+    private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (UserInputBox.Text != "")
+            // get the user input
+            string userText = UserInputBox.Text;
+
+            if (string.IsNullOrWhiteSpace(userText))
+            {
+                return;
+            }
+            else
             {
 
-                // get the user input
-                string userText = UserInputBox.Text;
-
                 // add the user input to the chat box
-                Messages.Add(new ChatMessage { Sender ="you:",Message = userText, Color = "#ADD8E6", Alignment = HorizontalAlignment.Right });
+                Messages.Add(new ChatMessage { Sender = "you:", Message = userText, Color = "#ADD8E6", Alignment = HorizontalAlignment.Right });
                 ChatHistoryManager.SaveChatHistory(Messages);
                 ScrollHelper.ScrollToBottom(ChatHistoryBox);
 
@@ -55,12 +57,9 @@ namespace ChatBot_320
                 ChatHistoryManager.SaveChatHistory(Messages);
                 ScrollHelper.ScrollToBottom(ChatHistoryBox);
 
-
             }
-            else
-            {
-                MessageBox.Show("Please enter a message");
-            }
+            
+              
 
         }
         /// <summary>
@@ -85,6 +84,11 @@ namespace ChatBot_320
             {
                 Button_Click(sender, e);
             }
+        }
+
+        private void In(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
