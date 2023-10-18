@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="ChatBot_320.BotResponseManager">
-    <Position X="7.75" Y="0.5" Width="3.5" />
-    <NestedTypes>
-      <Class Name="ChatBot_320.BotResponseManager.KeywordResponse" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>BotResponseManager.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
+    <Position X="5.75" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAEEAAAAAAAAAAAAAAAAAAAAgEAEAAAAAAAAAAAAA=</HashCode>
       <FileName>BotResponseManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,24 +17,54 @@
   <Class Name="ChatBot_320.MainWindow">
     <Position X="0.75" Y="2.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAIAAAAgAEAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACAAIAAAAgAEAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ChatHistoryManager">
-    <Position X="5.25" Y="2.75" Width="3.25" />
+    <Position X="0.5" Y="5.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAQAAAAAAAAAAAAABEAAAAAAAAAAAAA=</HashCode>
       <FileName>ChatHistoryManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ScrollHelper">
-    <Position X="8.75" Y="3" Width="3.25" />
+    <Position X="5" Y="5.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAgAAAAA=</HashCode>
       <FileName>ScrollHelper.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ChatBot_320.JsonResponseLoader">
+    <Position X="10.25" Y="3" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JsonResponseLoader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ChatBot_320.MessageBoxShower">
+    <Position X="10.25" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>MessageBoxShower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ChatBot_320.IMessageShower">
+    <Position X="9.75" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>IMessageShower.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ChatBot_320.IResponseLoader">
+    <Position X="13.5" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IResponseLoader.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
