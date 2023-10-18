@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System;
 using System.IO;
-using Newtonsoft.Json;
-using System.Windows;
 
 namespace ChatBot_320
 {
-    public static class BotResponseManager
-    {
-        public static Dictionary<string, string> responses;
 
-        static BotResponseManager()
+    public class BotResponseManager
+    {
+        private readonly IResponseLoader responseLoader;
+        private readonly IMessageShower messageShower;
+        private readonly string filePath;
+        private Dictionary<string, string> responses;
+
+        public BotResponseManager(IResponseLoader responseLoader, IMessageShower messageShower, string filePath)
         {
+            this.responseLoader = responseLoader;
+            this.messageShower = messageShower;
+            this.filePath = filePath;
             LoadResponses();
+
         }
 
-        public static string GetResponse(string userInput)
+        public string GetResponse(string userInput)
         {
             if (responses == null)
             {
-                LoadResponses();
+                return "Entschuldigung, ich habe das nicht verstanden.";
             }
 
             foreach (var keyword in responses.Keys)
@@ -33,17 +39,18 @@ namespace ChatBot_320
             return "Entschuldigung, ich habe das nicht verstanden.";
         }
 
-        public static void LoadResponses()
+        public void LoadResponses()
         {
-            var path = "botResponses.json";
-            if (!File.Exists(path))
+
+            responses = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+            if (!File.Exists(filePath))
             {
-                MessageBox.Show("Datei nicht gefunden. Bitte stellen Sie sicher, dass botResponses.json im aktuellen Verzeichnis liegt.");
+                messageShower.show($"Datei nicht gefunden. Bitte stellen Sie sicher, dass {filePath} im aktuellen Verzeichnis liegt.");
                 return;
             }
 
-            var json = File.ReadAllText(path);
-            var items = JsonConvert.DeserializeObject<List<KeywordResponse>>(json);
+            var items = responseLoader.LoadResponses(filePath);
 
             responses = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             foreach (var item in items)
@@ -59,11 +66,12 @@ namespace ChatBot_320
                 }
             }
         }
-
+    }
         public class KeywordResponse
         {
             public string Keyword { get; set; }
             public string Response { get; set; }
         }
-    }
+ 
+    
 }

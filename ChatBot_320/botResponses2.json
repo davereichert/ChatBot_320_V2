@@ -1,0 +1,14 @@
+
+  [
+    {
+      "Keyword": "hallo",
+      "Response": "Hallo, wie kann ich Ihnen helfen?"
+    },
+    {
+      "Keyword": "tschüss",
+      "Response": "Auf Wiedersehen!"
+    }
+  ]
+
+
+

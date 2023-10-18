@@ -10,6 +10,7 @@ namespace ChatBot_320
     public partial class MainWindow : Window
     {
         public ObservableCollection<ChatMessage> Messages { get; set; } = new ObservableCollection<ChatMessage>();
+        private BotResponseManager botManager;
 
 
 
@@ -17,9 +18,12 @@ namespace ChatBot_320
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = this; // this is needed for the binding to work
+            this.DataContext = this;
             Messages = new ObservableCollection<ChatMessage>(ChatHistoryManager.LoadChatHistory());
             ScrollHelper.ScrollToBottom(ChatHistoryBox);
+
+            // Initialisieren Sie den BotResponseManager mit der gewünschten JSON-Datei
+            botManager = new BotResponseManager(new JsonResponseLoader(), new MessageBoxShower(), "botResponses.json");
 
         }
         /// <summary>
@@ -50,7 +54,7 @@ namespace ChatBot_320
                 UserInputBox.Text = "";
 
                 // send the input to the bot
-                string botResponse = BotResponseManager.GetResponse(userText.ToLower());
+                string botResponse = botManager.GetResponse(userText.ToLower());
 
                 // add the bot's response to the chat box (assuming you're using the ObservableCollection approach)
                 Messages.Add(new ChatMessage { Sender = "bot:", Message = botResponse, Color = "#90EE90", Alignment = HorizontalAlignment.Left });
@@ -86,9 +90,6 @@ namespace ChatBot_320
             }
         }
 
-        private void In(object sender, KeyEventArgs e)
-        {
-
-        }
+        
     }
 }
