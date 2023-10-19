@@ -24,4 +24,7 @@ ChatBot_320 ist ein einfacher Desktop-Chatbot, der auf WPF (Windows Presentation
 - **Newtonsoft.Json**: Wird verwendet, um den Chatverlauf in einer JSON-Datei zu speichern und zu laden.
 - **Datenbindung**: Die Anwendung verwendet Datenbindung, um den Chatverlauf zu aktualisieren und die Nachrichten in der Liste anzuzeigen.
 
+## Verwendete NuGet-Pakete
 
+- **Newtonsoft.Json**: Ein populäres JSON-Framework für .NET, das zum Serialisieren und Deserialisieren von JSON-Objekten verwendet wird.
+- **Moq**: Ein Mocking-Framework für .NET, das zum Isolieren von Code-Unterstützungsobjekten für Unit-Tests verwendet wird.
